@@ -1,0 +1,24 @@
+class Solution {
+    public int solution(String my_string) {
+        String[] arr = my_string.split(" ");
+        
+        int answer = Integer.parseInt(arr[0]); 
+        for (int i = 1; i < arr.length; i += 2) { 
+            String op = arr[i];
+            int num = Integer.parseInt(arr[i + 1]);
+            
+            switch (op) {
+                case "+":
+                    answer += num;
+                    break;
+                case "-":
+                    answer -= num;
+                    break;
+                default:
+                    throw new IllegalArgumentException("지원하지 않는 연산자: " + op);
+            }
+        }
+        
+        return answer;
+    }
+}
