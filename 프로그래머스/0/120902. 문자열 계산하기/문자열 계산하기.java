@@ -15,7 +15,7 @@ class Solution {
                     answer -= num;
                     break;
                 default:
-                    throw new IllegalArgumentException("지원하지 않는 연산자: " + op);
+                   
             }
         }
         
